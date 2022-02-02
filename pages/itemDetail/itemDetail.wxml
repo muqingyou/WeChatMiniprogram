@@ -1,0 +1,21 @@
+ <video class="img" src="http://edge.ivideo.sina.com.cn/129992839.mp4?KID=sina,viask&Expires=1620403200&ssig=oGiaj4em9n" initial-time="0" autoplay="false" loop="false"> 
+ </video>
+   
+ <view class="nav">
+    <view class="navItem" wx:for="{{groupList}}" wx:key="id">
+        <view class="navContent {{navID === item.id?'active':''}}" 
+        id="{{item.id}}" bindtap="changeNav">
+            {{item.name}}
+        </view>
+    </view>
+</view>
+
+ <scroll-view wx:if="{{navID===1}}" class="middle1" scroll-y style="height:{{scrollViewHeith}}px">
+    <view class="jianjie">简介</view>
+    <view class="intro">{{item.intro}}</view> 
+ </scroll-view>
+
+<scroll-view class="middle2" scroll-y wx:else style="height:{{scrollViewHeith}}px">
+   <image class="img" src="https://pic1.zhimg.com/v2-87acc40043909410d97fe721ba574f18_r.jpg" mode="widthFix"/>
+</scroll-view>
+   

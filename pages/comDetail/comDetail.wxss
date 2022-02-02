@@ -1,0 +1,94 @@
+.img {
+  width: 100%;
+  height: 480rpx;
+}
+.nav {
+  display: flex;
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.nav .navItem {
+  width: 50%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font: normal 400 26rpx 'Microsoft yahei';
+  overflow: hidden;
+  /*超出隐藏*/
+  text-overflow: ellipsis;
+  /*超出显示为省略号*/
+  white-space: nowrap;
+}
+.nav .active {
+  border-bottom: 5rpx solid #3ca300;
+  font: normal bold 30rpx 'Microsoft yahei';
+}
+.middle1 {
+  padding: 0 5rpx;
+}
+.middle1 .title {
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+  font: normal bold 36rpx 'Microsoft yahei';
+}
+.middle1 .jianjie {
+  font: normal bold 30rpx 'Microsoft yahei';
+  height: 40rpx;
+}
+.middle1 .intro {
+  font: normal 400 28rpx 'Microsoft yahei';
+  color: grey;
+  text-indent: 2em;
+}
+.middle2 .member {
+  height: 90rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+}
+.middle2 .member .ava {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-right: 8rpx;
+}
+.middle2 .member .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bottom {
+  background-color: white;
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0;
+}
+.bottom #commit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #03e374;
+  width: 730rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  color: white;
+  margin-top: 20rpx;
+}
+.bottom #commit-btn:active {
+  background-color: #7fddbf;
+}
+.bottom #have-commit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 730rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  color: white;
+  margin-top: 20rpx;
+  background-color: grey;
+}

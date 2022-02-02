@@ -1,0 +1,75 @@
+<!-- <swiper class="banners" indicator-dots indicator-color="rgb(254,247,251)" indicator-active-color="rgb(36,147,240)"
+autoplay current="0" current-item-id="" interval="5000" duration="1000" circular >
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerID">
+        <image class="pic" src="{{item.pic}}" mode="scaleToFill"/>
+    </swiper-item>
+</swiper> -->
+<swiper class="banners" indicator-dots indicator-color="rgb(254,247,251)" indicator-active-color="rgb(36,147,240)"
+autoplay current="0" interval="5000" duration="1000" circular >
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerID">
+        <image class="pic" src="{{item.pic}}" mode="scaleToFill"/>
+    </swiper-item>
+</swiper>
+<view class="menu" style="background-color:rgba(0,0,0,0);">
+    <navigator class="menu-group" url="/pages/community/community">
+        <view class="menu-item">
+           <image class="" src="/icons/首页-社区活动.png" mode="aspectFit"/> 
+        </view>
+        <view class="name">社区活动</view>
+    </navigator>
+    <navigator class="menu-group" url="/pages/feedback/feedback">
+        <view class="menu-item">
+            <image class="" src="/icons/首页-意见反馈.png" mode="aspectFit"/> 
+        </view>
+        <view class="name">意见反馈</view>
+    </navigator>  
+    <navigator class="menu-group" url="/pages/phones/index">
+        <view class="menu-item">
+            <image class="" src="/icons/首页-便民服务.png" mode="aspectFit"/> 
+        </view>
+        <view class="name">便民服务</view>
+    </navigator>
+    <navigator class="menu-group" url="/pages/send/send">
+        <view class="menu-item">
+            <image class="" src="/icons/首页-调度中心.png" mode="aspectFit"/> 
+        </view>  
+        <view class="name">调度中心</view>
+    </navigator>
+
+</view>
+
+<!-- <view class="nav">
+    <view class="navItem" wx:for="{{navGroupList}}" wx:key="id">
+        <view class="nacContent {{navID === item.id?'active':''}}" 
+        id="{{item.id}}" bindtap="changeNav">
+            {{item.name}}
+        </view>
+    </view>
+</view> -->
+<view class="nav" style="background-color:rgba(0,0,0,0);">
+    <view class="navItem" wx:for="{{groupList}}" wx:key="id">
+        <view class="navContent {{navID === item.id?'active':''}}" 
+        id="{{item.id}}" bindtap="changeNav">
+            {{item.name}}
+        </view>
+    </view>
+</view>
+
+<scroll-view enable-flex class="phone_floor" scroll-y="false"
+style="height:50%">
+<!--style="height:{{scrollViewHeith}}px" -->
+    <view class="phone_group"
+        wx:for="{{phone_list}}"
+        wx:key="id"
+        bindtap="handleListItem"
+    >
+        <view class="picture">
+            <image class="img" src="{{item.picsource}}" mode="scaleToFill" />
+        </view>  
+        <view class="info">
+            <view class="title">{{item.address}}</view>
+            <view class="date">{{item.date}}</view>
+        </view>  
+    </view>
+</scroll-view>
+  

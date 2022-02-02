@@ -1,0 +1,85 @@
+<view class="whole">
+    <view class="title">事件类型选择</view>
+    <view class="type">
+        <radio-group name="type">
+            <label>
+                <radio value="泥石流" checked/>泥石流
+            </label>
+            <label>
+                <radio value="火灾" />火灾
+            </label>
+            <label style="height:30%">
+                <radio value="洪灾" />洪灾
+            </label>
+        </radio-group>
+    </view>
+    <view class="title">事件描述</view>
+    <view class="descri">
+        <view class="input-area">
+            <textarea style="height:80%" placeholder="请输入事件描述" placeholder-style="color:grey;" class="text-area" maxlength="400"
+            bindblur="bindTextAreaBlur" bindinput='limitWord'/>
+        </view>   
+        <view class="clear">
+            <text class="floatItem">{{currentWord}}/{{maxWord}}</text>
+        </view>
+    </view>
+    <view class="imgLoad">
+            <view class="title">图片上传</view>
+            <view class="group">
+                <view class="image_group"
+                    wx:for="{{tempFilePaths}}"
+                    wx:key="*this"
+                >
+                    <image class="image_item" src="{{item}}" mode="aspectFit" bindtap="previewImg" data-index="{{index}}">   
+                    <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>             
+                    </image>      
+                </view>
+                <view class="selectpic" bindtap="loadpic">
+                    <image class="pic" src="/icons/jia.png" mode="aspectFit"/>                
+                </view>
+            </view>
+    </view>
+    <view class="title">录音上传</view>
+    <view class="record">
+            <!-- <button style="width:80%" class='speak' wx:if="{{!haveRecord}}" bindtap="tapTip" catch:longpress="start" catch:touchend="stop">
+                按住说话
+            </button> -->
+            <button style="width:80%" class='speak' bindtap="tapTip" catch:longpress="start" catch:touchend="stop">
+                按住说话
+            </button>
+
+            <text class="iconfont icon-huatong" bindtap="play"></text>
+            
+            <!-- <button style="width:80%" class="recordFile" wx:if="{{haveRecord}}" bindtap="play">
+                点击播放
+            </button> -->
+    </view>
+    <view class="title">地点上传</view>
+    <view class="mapLoad" >
+        <map id="ofoMap" longitude="{{longitude}}" latitude="{{latitude}}" 
+            markers="{{markers}}"
+            covers="{{covers}}" scale="16" 
+            show-location
+            bindregionchange="bindregionchange"
+            controls="{{controls}}"
+            bindcontroltap='bindcontroltap'
+            bindcallouttap="navigate"
+            bindtap="toMap"
+        >  
+        <cover-view slot="callout">
+            <cover-view marker-id="1" ></cover-view>
+        </cover-view>
+        </map>
+        <image class="center" src="/icons/maker.png" mode="aspectFit"/>    
+    
+    </view>
+    
+    <view class="btn">
+    <button id="commit-btn">提交</button>
+    </view>
+</view>
+
+
+
+
+  

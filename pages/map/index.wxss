@@ -1,0 +1,39 @@
+.view-c {
+  padding: 0 10rpx;
+}
+.view-c .view-top {
+  position: relative;
+}
+.view-c .view-top .top-left {
+  width: 60%;
+}
+.view-c .view-top #submit {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  width: 35%;
+  height: 80%;
+  font: normal 400 30rpx 'Microsoft yahei';
+  background-color: #5cb99a;
+  color: white;
+  z-index: 99;
+}
+.view-c .view-top #submit:active {
+  background-color: #468a73;
+}
+.view-c .item .item-title {
+  font: normal 400 30rpx 'Microsoft yahei';
+}
+.view-c .item .item-details {
+  font: normal 400 25rpx 'Microsoft yahei';
+  color: #a0a0a0;
+}
+.view-c .item:active {
+  color: red;
+  background-color: #cacaca;
+}
+cover-view {
+  background-color: white;
+  color: red;
+  font-size: 30rpx;
+}

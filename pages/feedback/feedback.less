@@ -1,0 +1,88 @@
+page{
+    background-image: url("https://636c-cloud1-1g8n6pbs996a59df-1305930351.tcb.qcloud.la/%E5%8F%8D%E9%A6%88%E8%83%8C%E6%99%AF%E9%A1%B5.png?sign=0bfce3bf5f57c89eef20ca0ddd3a1203&t=1621742239");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .whole{
+        position: relative;
+        margin: 20rpx;
+        margin-bottom: 0;
+        //width: 95%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        overflow: hidden;//塌陷
+        .input-area{
+            background-color: rgba(245, 245, 245, 0.986);
+            margin: 40rpx auto;
+            width: 95%;
+            height: 430rpx;
+            box-shadow:0rpx 2rpx 5rpx 5rpx rgba(218, 216, 216,.3);
+            .text-area{
+                color:grey;
+                padding: 10rpx;
+                height: 430rpx; 
+            }
+        }
+        .load-img{
+            .title{
+                margin-left: 20rpx;
+                .shu{
+                    color: rgb(0, 212, 0);
+                    font-weight: bold;
+                }
+                .txt{
+                    font-family: 'Microsoft yahei';
+                }
+            }
+            .group{
+                margin-left: 20rpx;
+                margin-top: 20rpx;
+                display: flex;
+                flex-wrap: wrap;
+                .image_item{
+                    width: 160rpx;
+                    height: 160rpx;
+                    margin-right: 10rpx;
+                    position: relative;
+                    .delete-btn{
+                        position: absolute;
+                        top: 0;
+                        right: 0
+                    }
+                }
+                
+                .selectpic{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 160rpx;
+                    height: 160rpx;
+                    background-color: rgb(224, 224, 224);
+                    .pic{
+                        width: 80rpx;
+                        height: 80rpx;
+                    }
+                }
+            }
+            
+        }
+        #commit-btn{
+            //文字居中
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #75e2c1;
+            width: 400rpx;
+            height: 80rpx;
+            border-radius:40rpx;
+            //边距
+            position: absolute;
+            bottom: 40rpx;
+            left: 50%;
+            margin-left: -200rpx;
+        }
+        #commit-btn:active {
+            background-color: #7da79a;
+        }
+    }
+

@@ -1,0 +1,75 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "便民电话",
+          "pathName": "pages/phones/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "意见反馈",
+          "pathName": "pages/feedback/feedback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "社区详情",
+          "pathName": "pages/comDetail/comDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "事件上传",
+          "pathName": "pages/thingsLoad/thingsLoad",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页详情",
+          "pathName": "pages/itemDetail/itemDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/map/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

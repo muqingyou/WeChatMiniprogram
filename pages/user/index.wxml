@@ -1,0 +1,43 @@
+<!--pages/user/index.wxml-->
+<!-- <view class="user_head">
+    <view class="user_info">
+        <image class="avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"/icons/missing-face.png"}}' mode="aspectFit" bindtap='toLogin'/>
+        <view class="nickname" >{{userInfo.nickname?userInfo.nickname:'游客'}}</view>
+    </view>
+</view> -->
+<view class="user_head">
+    <view class="user_info">
+        <block wx:if="{{!hasUserInfo}}">
+           <button class="avatar" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        </block> 
+        <block wx:else>
+          <view class="avatarContainer">
+              <image class="avatarBorder" src="/icons/头像框.png" mode="scaleToFill"/>
+              <image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          </view>
+          <view class="nickname">{{userInfo.nickName}}</view>
+        </block>
+    </view>
+</view>
+<view class="user_floor_container">
+    <view class="user_floor">
+        <navigator class="floor_item" url="/pages/studyRecord/index">
+            学习记录
+            <view class="right_arrow">></view>
+        </navigator>
+        <navigator class="floor_item" url="/pages/scores/index">
+            我的积分
+            <view class="right_arrow">></view>
+        </navigator>
+        <navigator class="floor_item" url="/pages/honors/index">
+            我的荣誉
+            <view class="right_arrow">></view>
+        </navigator>
+        <navigator class="floor_item dark" url="/pages/thingsRecord/index">
+        <!-- <navigator class="floor_item" url="/pages/phones/index"> -->
+            事件上报记录
+            <view class="right_arrow">></view>
+        </navigator>
+    </view>
+</view>
+

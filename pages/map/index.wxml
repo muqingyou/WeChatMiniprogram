@@ -1,0 +1,39 @@
+<view class='view-c' style="{{showview?'height:10%':'height:30%'}}">
+  <view class='view-top'>
+    <view class="top-left">
+      <text style="font-size: 24rpx;margin-top: 40rpx;  color: #b65151">当前：{{district}}</text>
+      <input placeholder="输入城市"  class='input-c' bindinput="getsuggest" value="{{backfill}}" />
+    </view>
+    <button id="submit" size="default" bindtap="submit">地点上报</button>
+  </view>
+  <!-- 搜索 -->
+  <scroll-view class="" scroll-y style="height:70%">
+    <view wx:for="{{suggestion}}" wx:key="index" wx:if="{{!showview}}">
+      <!--绑定回填事件-->
+      <view bindtap="backfill" id="{{index}}" class='item'>
+        <!--根据需求渲染相应数据-->
+        <!--渲染地址title-->
+        <view class='item-title'>{{item.title}}</view>
+        <!--渲染详细地址-->
+        <view class='item-details'>{{item.addr}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+  
+<map id="ofoMap" longitude="{{longitude}}" latitude="{{latitude}}" 
+    markers="{{markers}}"
+    covers="{{covers}}" scale="{{scale}}" 
+    show-location
+    class="{{showview?'map-c':'hidden'}}"
+    bindregionchange="bindregionchange"
+    controls="{{controls}}"
+    bindcontroltap='bindcontroltap'
+    style="{{showview?'width:100%;height:90%':'width:100%;height:80%'}}"
+    bindcallouttap="navigate"
+  >
+  <cover-view slot="callout">
+    <cover-view marker-id="1" ></cover-view>
+  </cover-view>
+</map>

@@ -1,0 +1,30 @@
+<!--pages/phones/index.wxml-->
+<scroll-view class="phone_floor" scroll-y="false">
+    <view class="phone_group"
+        wx:for="{{phone_list}}"
+        wx:key="id"
+        id="{{item.id}}" 
+        bindtap="call"    
+    >
+        <view class="picture">
+            <image class="img" src="{{item.picsource}}" mode="widthFix" />
+        </view>  
+        <view class="info">
+            <view class="position">{{item.position}}</view>
+            <view class="other">
+                <text class="title">姓名：</text>
+                <text class="value">{{item.name}}</text>  
+            </view>
+            <view class="other">
+                <text class="title">电话：</text>
+                <text class="value">{{item.phone}}</text>
+            </view>
+            <view class="other">
+                <text class="title">办公地点：</text>
+                <text class="value">{{item.address}}</text>
+            </view>
+        </view>  
+    </view>
+</scroll-view>
+  
+

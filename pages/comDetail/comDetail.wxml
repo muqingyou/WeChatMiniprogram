@@ -1,0 +1,25 @@
+ <image class="img" src="https://tse1-mm.cn.bing.net/th/id/OIP.mYBs-T9BgY4bSS17ezfI4QHaE8?w=187&h=125&c=7&o=5&dpr=1.5&pid=1.7" mode="scaleToFill"/>
+ <view class="nav">
+     <view class="navItem {{navID === item.id?'active':''}}" wx:for="{{groupList}}" wx:key="id"
+     id="{{item.id}}" bindtap="changeNav">
+         {{item.name}}
+     </view>
+ </view> 
+
+ <scroll-view wx:if="{{navID===1}}" class="middle1" scroll-y style="height:{{scrollViewHeith}}px">
+    <view class="title">{{item.title}}</view>
+    <view class="jianjie">简介</view>
+    <view class="intro">{{item.intro}}</view> 
+ </scroll-view>
+
+<scroll-view class="middle2" scroll-y wx:else style="height:{{scrollViewHeith}}px">
+    <view class="member" wx:for="{{member}}" wx:key="id">
+        <image class="ava"src="{{item.ava}}"></image>
+        <view class="name">{{item.name}}</view>
+    </view>
+</scroll-view>
+   
+ <view class="bottom">
+     <button id="commit-btn" wx:if="{{haveCommit===0}}" bindtap="handleCommit">报名</button>     
+     <button id="have-commit-btn" wx:else bindtap="handleCommit">已报名</button>     
+ </view>

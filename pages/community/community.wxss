@@ -1,0 +1,49 @@
+scroll-view {
+  background-color: #f1ecf0;
+}
+scroll-view .itemContainer {
+  display: flex;
+  width: 95%;
+  height: 300rpx;
+  margin: 10rpx auto;
+  background-color: white;
+}
+scroll-view .itemContainer image {
+  width: 240rpx;
+  margin: 10rpx 10rpx;
+}
+scroll-view .itemContainer .right {
+  position: relative;
+  margin: 10rpx 10rpx;
+  width: 450rpx;
+}
+scroll-view .itemContainer .right .title {
+  font: normal bold 36rpx 'Microsoft yahei';
+  width: 350rpx;
+}
+scroll-view .itemContainer .right .nostart {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  font: normal 400 26rpx 'Microsoft yahei';
+  color: #c8c3c6;
+}
+scroll-view .itemContainer .right .start {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  font: normal 400 26rpx 'Microsoft yahei';
+  color: #7bff2f;
+}
+scroll-view .itemContainer .right .right-bottom {
+  font: normal 400 26rpx 'Microsoft yahei';
+  color: #b8b8b8;
+}
+scroll-view .itemContainer .right .right-bottom .txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*超出显示为省略号*/
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}

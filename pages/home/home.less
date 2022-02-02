@@ -1,0 +1,129 @@
+page{
+    background-size:cover;
+    background-image: url("https://636c-cloud1-1g8n6pbs996a59df-1305930351.tcb.qcloud.la/signbackground.jpg?sign=ee842ff06a354a32ce7aeeb3d9ab8b1d&t=1621741755");
+    background-repeat:no-repeat;
+}
+swiper{
+    margin: 10rpx auto ;
+    width: 95%;
+    //height: 400rpx;
+    height: 28%;
+    swiper-item{
+        .pic{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.menu{
+   margin: 15rpx auto;
+   width:95%;
+   //height:140rpx;
+   height: 12%;
+   //box-shadow: 5px 5px 5px -4px rgba(0, 0, 0, 0.3);
+   border: 2rpx solid #c7c7c7;
+   border-radius: 20rpx;
+   display: flex;
+   align-items: center;
+   .menu-group{
+        width:25%;
+        height:100%;
+        text-align:center;
+        
+        .menu-item{
+            width:80rpx;
+            height:55%;
+            border-radius: 40rpx;
+            margin: 5% auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .name{
+           height:35%;
+           font-size: 25rpx;
+        }
+   }
+    
+}
+.nav{
+    display: flex;
+    box-sizing: border-box;
+    //border: 5rpx solid #ebece9;
+    width: 95%;
+    //height:50rpx;
+    height: 5%;
+    border-radius: 20rpx;
+    margin: 10rpx auto;
+    margin-top: 20rpx;
+    .navItem{
+        padding: 0 10rpx;
+        width: 30%;
+        height: 50rpx;
+        text-align:center;
+        line-height: 50rpx;
+        font: normal 400 26rpx 'Microsoft yahei';
+    }
+    .active{
+        border-bottom:5rpx solid grey;
+        font: normal bold 30rpx 'Microsoft yahei';
+    }
+    .navContent{
+        overflow: hidden;  /*超出隐藏*/
+        text-overflow: ellipsis;  /*超出显示为省略号*/
+        white-space: nowrap;
+    }
+}
+.phone_floor{
+    //border: 1px solid ;
+    display: flex;
+    flex-wrap: wrap;
+    //height:500rpx;
+    .phone_group{
+        height: 380rpx;
+        width: 355rpx;
+        //height: 380rpx;
+        margin: 10rpx;
+        background-image: url("https://636c-cloud1-1g8n6pbs996a59df-1305930351.tcb.qcloud.la/%E6%96%B9%E6%A1%861.png?sign=b8d09e475bb29b35550ca038450022f6&t=1621741828");
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        //border-radius: 15rpx;
+        .picture{
+            display: flex;
+            justify-content: center;
+            height: 55%; 
+            .img{
+                width: 95%;
+                height: 100%; 
+            }
+            
+        }
+        .info{
+            height: 40%;
+            width: 100%;
+            position: relative;
+            .title{
+                height: 80rpx;
+                width: 90%;
+                margin: 0 auto;
+                font-size: 30rpx;
+                overflow: hidden;  /*超出隐藏*/
+                text-overflow: ellipsis;  /*超出显示为省略号*/
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .date{
+                color: white;
+                font: normal 400 20rpx 'Microsoft yahei';
+                position: absolute;
+                bottom: 8%;
+                left: 10%;
+            }
+        }
+    }
+}

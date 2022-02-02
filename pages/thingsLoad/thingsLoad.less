@@ -1,0 +1,147 @@
+.whole{
+    height: 100%;
+    position: relative;
+}
+.title{
+    height: 3%;
+    line-height: 40rpx;
+    margin:15rpx  15rpx;
+    border-left:10rpx solid rgb(0, 136, 0);
+    padding-left: 12rpx;
+}
+.type{
+    height: 15%;
+    radio-group{
+        height: 90%;
+        margin: 1% 30rpx;
+        display: flex;
+        flex-direction: column;
+        label{
+            height: 30%;
+            margin: 1% 0;
+            radio{
+                margin-right:10rpx ;
+            }
+        }
+       
+    }
+}
+.descri{
+    //清除浮动
+    //overflow: hidden;
+    height: 20%;
+    .input-area{
+        height: 90%;
+        .text-area{
+            margin: 5rpx auto;
+            width: 85%;
+            border: 2rpx solid gray;
+            border-radius: 15rpx;
+            padding: 10rpx;
+        }
+    }
+    
+    .clear{
+        .floatItem{
+            // position: relative;
+            // left: 85%;
+            display: inline-block;
+            width: 95%;
+            text-align: right;
+        }
+    }
+}
+.group{
+    height: 5%;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    .image_item{
+        width: 100rpx;
+        height: 100rpx;
+        margin-right: 10rpx;
+        position: relative;
+        .delete-btn{
+            position: absolute;
+            top: 0;
+            right: 0
+        }
+    }
+    
+    .selectpic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100rpx;
+        height: 100rpx;
+        background-color: rgb(224, 224, 224);
+        .pic{
+            width: 80rpx;
+            height: 80rpx;
+        }
+    }
+}
+.record{
+    height: 10%;
+    button{
+        background-color: white;
+        border: 1rpx solid rgb(179, 179, 179);
+        font: normal 400 30rpx 'Microsoft yahei';
+    }
+    button:active{
+        background-color: rgb(204, 204, 204);
+    }
+    text{
+        float: right;
+    }
+}
+.mapLoad{
+    position: relative;
+    map{
+        //height: 12%;
+        margin: 0 auto;
+        width: 90%;
+    }
+    .location{
+        position: absolute;
+        left: 7%;
+        bottom: 2%;
+        width: 55rpx;
+        height: 55rpx;
+        z-index: 99;
+    }
+    .center{
+        position: absolute;
+        left: 50%;
+        margin-left: -27.5rpx;
+        bottom:50%;
+        margin-bottom: -27.5rpx;
+        width: 55rpx;
+        height: 55rpx;
+    }
+}
+
+.btn{
+    #commit-btn{
+        //文字居中
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4dad4e;
+        color: white;
+        width: 90%;
+        height: 5%;
+        border-radius:40rpx;
+        //
+        // position: absolute;
+        // bottom: 1%;
+        // left:50%;
+        // margin-left: -45%;
+        margin: 15rpx auto;
+    }
+    #commit-btn:active {
+        background-color: #7da79a;
+    }
+}
+

@@ -1,0 +1,16 @@
+<scroll-view enable-flex>
+    <view class="itemContainer"  id="{{item.id}}" bindtap="handleItem" wx:for="{{itemList}}" wx:key="id">
+        <image class="" src="{{item.picsource}}" mode="widthFix"/>
+        <view class="right">
+            <view class="title">{{item.title}}</view>
+            <view class="nostart" wx:if="{{!item.start}}">未开始</view>
+            <view class="start" wx:else>开始</view>
+            <view class="right-bottom">
+                <view class="txt">日期：{{item.date}}</view>
+                <view class="txt">地点：{{item.addr}}</view>
+                <view class="txt">简介：{{item.intro}}</view> 
+            </view>
+        </view>  
+    </view>
+</scroll-view>
+  

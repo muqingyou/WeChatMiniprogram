@@ -1,0 +1,53 @@
+.img {
+  width: 100%;
+  height: 480rpx;
+}
+.nav {
+  display: flex;
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.nav .navItem {
+  width: 50%;
+  height: 60rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: normal 400 26rpx 'Microsoft yahei';
+}
+.nav .navContent {
+  overflow: hidden;
+  /*超出隐藏*/
+  text-overflow: ellipsis;
+  /*超出显示为省略号*/
+  white-space: nowrap;
+}
+.nav .active {
+  border-bottom: 5rpx solid #a33400;
+  font: normal bold 30rpx 'Microsoft yahei';
+}
+.middle1 {
+  padding: 0 5rpx;
+}
+.middle1 .title {
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+  font: normal bold 36rpx 'Microsoft yahei';
+}
+.middle1 .jianjie {
+  font: normal bold 30rpx 'Microsoft yahei';
+  height: 40rpx;
+}
+.middle1 .intro {
+  font: normal 400 28rpx 'Microsoft yahei';
+  color: grey;
+  text-indent: 2em;
+  white-space: pre-line;
+}
+.middle2 .img {
+  width: 100%;
+}

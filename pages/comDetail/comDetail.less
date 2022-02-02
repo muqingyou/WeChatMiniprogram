@@ -1,0 +1,98 @@
+.img{
+    width: 100%;
+    height: 480rpx;
+}
+.nav{
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    border-radius: 20rpx;
+    .navItem{
+        //padding: 0 10rpx;
+        width: 50%;
+        height: 60rpx;
+        text-align:center;
+        line-height: 60rpx;
+        font: normal 400 26rpx 'Microsoft yahei';
+        overflow: hidden;  /*超出隐藏*/
+        text-overflow: ellipsis;  /*超出显示为省略号*/
+        white-space: nowrap;
+    }
+    .active{
+        border-bottom:5rpx solid rgb(60, 163, 0);
+        font: normal bold 30rpx 'Microsoft yahei';
+    }
+}
+.middle1{
+    //height: 550rpx;
+    padding:0 5rpx;
+    .title{
+        display: flex;
+        height: 60rpx;
+        align-items: center;
+        font:normal bold 36rpx 'Microsoft yahei'
+    }
+    .jianjie{
+        font:normal bold 30rpx 'Microsoft yahei';
+        height:40rpx;
+    }
+    .intro{
+        font:normal 400 28rpx 'Microsoft yahei';
+        color:grey;
+        text-indent: 2em;
+    }
+}
+.middle2{
+   .member{
+       height:90rpx;
+       padding: 5rpx;
+       display: flex;
+       align-items: center;
+       .ava{
+           width: 70rpx;
+           height: 70rpx;
+           border-radius: 35rpx;
+           margin-right: 8rpx;
+       }
+       .name{
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis; 
+       }
+   } 
+}
+.bottom{
+    background-color: white;
+    width: 100%;
+    height: 90rpx;
+    position: fixed;
+    bottom: 0;
+    #commit-btn{
+        //文字居中
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #03e374;
+        width: 730rpx;
+        height: 70rpx;
+        border-radius:40rpx;
+        color: white;
+        margin-top: 20rpx;
+    }
+    #commit-btn:active {
+        background-color: #7fddbf;
+    }
+    #have-commit-btn{
+        //文字居中
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 730rpx;
+        height: 70rpx;
+        border-radius:40rpx;
+        color: white;
+        margin-top: 20rpx;
+        background-color: grey;
+    }
+}

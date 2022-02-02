@@ -1,0 +1,8 @@
+<!--components/searchInput/searchInput.wxml-->
+<view class="search_input">
+    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        search
+    </navigator>
+      
+</view>
+  

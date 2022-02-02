@@ -1,0 +1,27 @@
+<view class="whole">
+    <view class="input-area">
+        <textarea placeholder="请输入..." placeholder-style="color:grey;" class="text-area" maxlength="-1"
+        bindblur="bindTextAreaBlur"/>
+    </view>
+    <view class="load-img">
+        <view class="title">
+            <text class="shu">| </text>
+            <text class="txt">图片上传</text>
+        </view>
+        <view class="group">
+            <view class="image_group"
+                wx:for="{{tempFilePaths}}"
+                wx:key="*this"
+            >
+                <image class="image_item" src="{{item}}" mode="aspectFit" bindtap="previewImg" data-index="{{index}}">   
+                <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>             
+                </image>      
+            </view>
+            <view class="selectpic" bindtap="loadpic">
+                <image class="pic" src="/icons/jia.png" mode="aspectFit"/>                
+            </view>
+        </view>
+        
+    </view>
+    <button type="primary" id="commit-btn" bindtap="submit">提交</button> 
+</view>
